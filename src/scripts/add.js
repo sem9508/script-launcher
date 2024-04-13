@@ -8,15 +8,13 @@ let path_input = document.getElementById('path');
 let submit_button = document.getElementById('submit');
 
 back_button.onclick = function(){
-    console.log('1')
-    window.location.href = path.join(__dirname, 'index.html');
-    console.log('2')
+    window.location.href = path.join(__dirname, '../html/index.html');
 }
-const dataPath = process.env.NODE_ENV === 'development'
 
-? path.join(__dirname, 'data')
-: path.join(process.resourcesPath, 'data');
-let jsonObject = JSON.parse(fs.readFileSync(path.join(dataPath, 'scripts.json')))
+const dataPath = process.env.NODE_ENV === 'development'
+    ? path.join(__dirname, '../../data')
+    : path.join(process.resourcesPath, 'data')
+let jsonObject = JSON.parse(fs.readFileSync(path.join(dataPath, '../../data/scripts.json')))
 
 submit_button.onclick = function(){
     new_name = name_input.value;
@@ -30,7 +28,7 @@ submit_button.onclick = function(){
 
     else {
         jsonObject[new_name] = new_path
-        fs.writeFileSync(path.join(dataPath, 'scripts.json'), JSON.stringify(jsonObject, null, 2))
-        window.location.href = path.join(__dirname, 'index.html')
+        fs.writeFileSync(path.join(dataPath, '../../data/scripts.json'), JSON.stringify(jsonObject, null, 2))
+        window.location.href = path.join(__dirname, '../html/index.html')
     }
 }

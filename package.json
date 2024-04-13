@@ -2,7 +2,7 @@
   "name": "script-launcher",
   "version": "1.0.0",
   "description": "Custom Script Launcher made with electrion.",
-  "main": "main.js",
+  "main": "src/scripts/main.js",
   "scripts": {
     "test": "test",
     "start": "electron .",
@@ -27,7 +27,7 @@
     ],
     "appId": "scriptlauncher",
     "win": {
-      "icon": "./logo.ico"
+      "icon": "assets/logo.ico"
     }
   },
   "dependencies": {
