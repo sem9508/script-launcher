@@ -5,7 +5,7 @@ const createWindow = () => {
     const win = new BrowserWindow({
       width: 800,
       height: 600,
-      icon: path.join(__dirname, 'logo.ico'),
+      icon: path.join(__dirname, '../../assets/logo.ico'),
       title: 'Script Launcher',
       webPreferences: {
         nodeIntegration: true,
@@ -16,7 +16,7 @@ const createWindow = () => {
     })
  
     win.setMenu(null)
-    win.loadFile(path.join(__dirname, 'index.html'))
+    win.loadFile(path.join(__dirname, '../html/index.html'))
 }
 
 app.whenReady().then(() => {
