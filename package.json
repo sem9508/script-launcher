@@ -1,0 +1,39 @@
+{
+  "name": "script-launcher",
+  "version": "1.0.0",
+  "description": "Custom Script Launcher made with electrion.",
+  "main": "main.js",
+  "scripts": {
+    "test": "test",
+    "start": "electron .",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder",
+    "postinstall": "electron-builder install-app-deps"
+  },
+  "keywords": [
+    "launcher"
+  ],
+  "author": "sem verdouw",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^29.3.0"
+  },
+  "build": {
+    "extraResources": [
+      {
+        "from": "data",
+        "to": "data"
+      }
+    ],
+    "appId": "scriptlauncher",
+    "win": {
+      "icon": "./logo.ico"
+    }
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "fs": "^0.0.1-security",
+    "path": "^0.12.7"
+  }
+}
