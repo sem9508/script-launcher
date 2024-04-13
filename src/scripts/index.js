@@ -11,11 +11,9 @@ add_button.onclick = function(){
 
 const dataPath = process.env.NODE_ENV === 'development'
 ? path.join(__dirname, '../../data')
-: path.join(process.resourcesPath, 'data');
-let jsonObject = JSON.parse(fs.readFileSync(path.join(dataPath, '../../data/scripts.json')))
+: path.join(process.resourcesPath, 'data')
 
-console.log(dataPath)
-console.log(jsonObject)
+let jsonObject = JSON.parse(fs.readFileSync(path.join(dataPath, 'scripts.json')))
 
 for (const key in jsonObject){
     script_button = document.createElement('button')
@@ -27,7 +25,7 @@ for (const key in jsonObject){
         if (event['altKey'] && event['ctrlKey']){
             delete jsonObject[key]
 
-            fs.writeFileSync(path.join(dataPath, '../../data/scripts.json'), JSON.stringify(jsonObject, null, 2))
+            fs.writeFileSync(path.join(dataPath, 'scripts.json'), JSON.stringify(jsonObject, null, 2))
             window.location.href = path.join(__dirname, '../html/index.html')
         }
     })
