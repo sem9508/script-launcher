@@ -16,6 +16,7 @@ const createWindow = () => {
     })
  
     win.setMenu(null)
+    win.webContents.openDevTools()
     win.loadFile(path.join(__dirname, '../html/index.html'))
 }
 
