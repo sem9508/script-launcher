@@ -1,5 +1,6 @@
 const { app, BrowserWindow } = require('electron')
 const path = require('path')
+require('dotenv').config()
 
 const createWindow = () => {
     const win = new BrowserWindow({
@@ -16,7 +17,10 @@ const createWindow = () => {
     })
  
     win.setMenu(null)
-    win.webContents.openDevTools()
+    if (process.env.OPEN_DEV_TOOLS == 'true'){
+      win.webContents.openDevTools()
+    }
+    
     win.loadFile(path.join(__dirname, '../html/index.html'))
 }
 

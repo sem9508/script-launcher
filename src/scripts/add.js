@@ -26,6 +26,12 @@ submit_button.onclick = function(){
         document.body.appendChild(error_message);
     }
 
+    else if (new_name == '' || new_path == ''){
+        error_message = document.createElement('h2');
+        error_message.innerHTML = 'Please enter some valid values.'
+        document.body.appendChild(error_message);
+    }
+
     else {
         jsonObject[new_name] = new_path
         fs.writeFileSync(path.join(dataPath, 'scripts.json'), JSON.stringify(jsonObject, null, 2))
