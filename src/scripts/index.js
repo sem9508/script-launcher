@@ -4,9 +4,14 @@ const path = require('path')
 require('dotenv').config()
 
 add_button = document.getElementById('add')
+settings_button = document.getElementById('settings')
 
 add_button.onclick = function(){
     window.location.href = path.join(__dirname, '../html/add.html')
+}
+
+settings_button.onclick = function(){
+    window.location.href = path.join(__dirname, '../html/settings.html')
 }
 
 const dataPath = process.env.NODE_ENV === 'development'

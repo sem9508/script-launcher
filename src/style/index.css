@@ -1,62 +1,63 @@
 body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica,
-      Arial, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica,
+    Arial, sans-serif;
+
+  margin: 0px;
+  padding: 0px;
+
+  background-color: black;
+}
+
+h1 {
+  margin: 20px;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 15px;
+  padding-left: 10%;
+  padding-right: 10%;
+  border-radius: 10px;
+  margin-bottom: 5px;
   
-    margin: 0px;
-    padding: 0px;
-  
-    background-color: black;
-  }
-  
-  h1 {
-    margin: 20px;
-    text-align: center;
-    padding-top: 10px;
-    padding-bottom: 15px;
-    padding-left: 10%;
-    padding-right: 10%;
-    border-radius: 10px;
-    margin-bottom: 5px;
-    
-    color: white;
-    background-color: gray;
-  }
-  
-  button {
-    background-color: gray;
-    padding: 30px;
-    font-size: medium;
-    border-radius: 10px;
-    margin: 20px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    border: none;
-  }
-  
-  button:hover {
-    background-color: darkgray;
-  }
-  
-  p {
-    color: white;
-  }
-  
-  .add {
-    background-color: rgb(37, 37, 37);
-    border-radius: 100px;
-    margin-right: 5px;
-  
-    color: white;
-    display: block;
-    width: calc(100% - 40px);
-    margin: 20px; /* Center the button horizontally */
-    text-align: center;
-    padding: 10px;
-  
-    border-radius: 10px;
-    margin-bottom: 20px;
-  }
-  
-  .add:hover {
-    background-color: rgb(26, 26, 26);
-  }
+  color: white;
+  background-color: gray;
+}
+
+button {
+  background-color: gray;
+  padding: 30px;
+  font-size: medium;
+  border-radius: 10px;
+  margin: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border: none;
+}
+
+button:hover {
+  background-color: darkgray;
+}
+
+p {
+  color: white;
+}
+
+.button-container {
+  display: flex; /* Enables flexbox layout */
+  justify-content: space-between; /* Distributes buttons evenly */
+}
+
+.menubutton {
+  /* Existing styles for your button */
+  background-color: rgb(37, 37, 37);
+  border-radius: 10px;
+  color: white;
+  width: calc(50% - 20px); /* Adjust width if needed (considering margins) */
+  margin: 20px; /* Adjust margins if needed */
+  text-align: center;
+  padding: 10px;
+}
+
+
+.menubutton:hover {
+  background-color: rgb(26, 26, 26);
+}
