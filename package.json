@@ -1,6 +1,6 @@
 {
   "name": "script-launcher",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Custom Script Launcher made with electrion.",
   "main": "src/scripts/main.js",
   "scripts": {
